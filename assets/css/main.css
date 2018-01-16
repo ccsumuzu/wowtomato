@@ -2045,8 +2045,40 @@
 /* Form */
 
 	form {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 	}
+
+		form .field {
+			margin: 0 0 1em 0;
+		}
+
+			form .field.half {
+				width: 50%;
+				float: left;
+				padding: 0 0 0 0.5em;
+			}
+
+				form .field.half.first {
+					padding: 0 0.5em 0 0;
+				}
+
+		form > .actions {
+			margin: 1em 0 0 0 !important;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			form .field.half {
+				width: 100%;
+				float: none;
+				padding: 0;
+			}
+
+				form .field.half.first {
+					padding: 0;
+				}
+		}
+
 
 	label {
 		display: block;
@@ -2525,7 +2557,7 @@
 			ul.actions li {
 				display: inline-block;
 				padding: 0 1em 0 0;
-				vertical-align: middle;
+				vertical-align: middle;	
 			}
 
 				ul.actions li:last-child {
@@ -2616,7 +2648,7 @@
 			}
 
 	dl {
-		margin: 0 0 2em 0;
+		margin: 0 0 2.45em 0;
 	}
 
 		dl dt {
@@ -3086,7 +3118,7 @@
 
 		.spotlight .image {
 			display: inline-block;
-			margin-left: 2em;
+			margin: 0 0 0 2em;
 			padding: 0.65em;
 			border-radius: 100%;
 			border: solid 1px;
@@ -3127,7 +3159,7 @@
 					-ms-flex: 0 1 auto;
 					flex: 0 1 auto;
 					margin-left: 0;
-					margin-bottom: 2em;
+					margin-bottom: 1em;
 				}
 
 		}
@@ -3459,6 +3491,7 @@
 			background-color: transparent;
 			box-shadow: inset 0 0 0 1px #dddddd;
 			color: #636363 !important;
+			letter-spacing: 0.2em;
 		}
 
 			#main input[type="submit"]:hover,
@@ -3493,6 +3526,7 @@
 				background-color: #8cc9f0;
 				color: #ffffff !important;
 				box-shadow: none;
+				letter-spacing: 0.2em;
 			}
 
 				#main input[type="submit"].special:hover,
@@ -3655,7 +3689,7 @@
 		}
 
 		#main > .main {
-			padding: 5em 5em 3em 5em ;
+			padding: 3em 5em 3em 5em ;
 			border-top: solid 1px #dddddd;
 		}
 
@@ -3682,7 +3716,7 @@
 		@media screen and (max-width: 1280px) {
 
 			#main > .main {
-				padding: 4em 4em 2em 4em ;
+				padding: 2em 4em 2em 4em ;
 			}
 
 				#main > .main > .image.main:first-child {
@@ -3695,7 +3729,7 @@
 		@media screen and (max-width: 980px) {
 
 			#main > .main {
-				padding: 4em 3em 2em 3em ;
+				padding: 2em 3em 2em 3em ;
 			}
 
 				#main > .main > .image.main:first-child {
@@ -3708,7 +3742,7 @@
 		@media screen and (max-width: 736px) {
 
 			#main > .main {
-				padding: 3em 2em 1em 2em ;
+				padding: 1.5em 2em 1.5em 2em ;
 			}
 
 				#main > .main > .image.main:first-child {
@@ -3721,7 +3755,7 @@
 		@media screen and (max-width: 480px) {
 
 			#main > .main {
-				padding: 3em 1.5em 1em 1.5em ;
+				padding: 1.5em 1.5em 1em 1.5em ;
 			}
 
 				#main > .main > .image.main:first-child {
@@ -3738,7 +3772,7 @@
 			}
 
 				#main > .main {
-					padding: 2.5em 1em 0.5em 1em ;
+					padding: 1.5em 1em 0.5em 1em ;
 				}
 
 					#main > .main > .image.main:first-child {
@@ -3764,21 +3798,23 @@
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		padding: 5em 5em 3em 5em ;
+		padding: 3em 3em 3em 3em ;
 		width: calc(100% + 2em);
 		margin: 0 0 3em -2em;
 	}
 
 		#footer > * {
-			width: calc(50% - 2em);
-			margin-left: 2em;
+			width: calc(50% - 3em);
+			margin-left: 3em;
 		}
 
 		#footer .copyright {
 			width: 100%;
-			margin: 2.5em 0 2em 0;
-			font-size: 0.8em;
+			margin: 2em 0 0 0;
+			font-size: 0.7em;
 			text-align: center;
+			color: rgba(255, 255, 255, 0.2);
+			letter-spacing: 0.1em;
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -3794,14 +3830,14 @@
 			#footer {
 				padding: 4em 3em 2em 3em ;
 				display: block;
-				margin: 0 0 3em 0;
+				margin: 0;
 				width: 100%;
 			}
 
 				#footer > * {
 					width: 100%;
 					margin-left: 0;
-					margin-bottom: 3em;
+					/* margin-bottom: 3em; */
 				}
 
 				#footer .copyright {
@@ -3836,7 +3872,7 @@
 
 /* biz */
 
-	#biz .statistics h3 {
+	#biz .statistics h4 {
 		margin: 0.5em 0;
 		color: #ffffff;
 	}
@@ -3844,6 +3880,7 @@
 	#biz strong {
 		letter-spacing: 0.05em;
 		margin-top: 0.25em;
+		font-size: 1.6em;
 	}
 
 	#biz p {
@@ -3874,3 +3911,23 @@
 			}
 
 		}
+
+/* Mobile */
+
+.home a {
+	display: none;
+}
+
+@media screen and (max-width: 736px) {
+
+	.home > a {
+		display: inline-block;
+		list-style: none;
+		position: fixed;
+		right: 25px;
+		bottom: 5px;
+		z-index: 100;
+		opacity: 1;
+		color: #9bb2e1
+	}
+}
